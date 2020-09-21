@@ -1,0 +1,23 @@
+// Считать два числа из файла task.in.
+// Записать их сумму в файл task.out.
+
+// Пример ввода
+// 10 20
+// Пример вывода
+// 30
+
+#include <stdio.h>
+
+int main() {
+    int a, b, sum;
+    FILE *in = fopen("task.in", "r");
+    FILE *out = fopen("task.out", "w");
+    
+    fscanf(in, "%d %d", &a, &b);
+    
+    sum = a + b;
+    fprintf(out, "%d\n", sum);
+    fclose(in);
+    fclose(out);
+    return 0;
+}
